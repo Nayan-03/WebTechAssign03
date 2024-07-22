@@ -1,0 +1,6 @@
+@Nayan_Assignement3_HostAddress = https://localhost:8080
+
+GET {{Nayan_Assignement3_HostAddress}}/
+Accept: application/json
+
+###
