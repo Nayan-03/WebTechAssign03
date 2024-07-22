@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Nayan_Assignement3.props" />
+</Project>

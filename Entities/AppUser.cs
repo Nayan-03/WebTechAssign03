@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Nayan_Assignement3.Entities
+namespace Nayan_Assignment3.Entities
 {
     public class AppUser
     {

@@ -1,9 +1,8 @@
 ﻿namespace Nayan_Assignement3.Database
 {
+    using global::Nayan_Assignment3.Entities;
     using Microsoft.EntityFrameworkCore;
-    using Nayan_Assignement3.Entities;
-    using Nayan_Assignment3.Entities;
-
+    
     namespace Nayan_Assignment3.Data
     {
         public class DatabaseContext : DbContext
