@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nayan_Assignement3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+815fcf2ddfbee40afa2af1f29c016fb00e952cf3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa724ed22daf49d9509284e9999b5d986f53719c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nayan_Assignement3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nayan_Assignement3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
