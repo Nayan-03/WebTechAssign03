@@ -60,6 +60,24 @@ namespace Nayan_Assignment3.Controllers
             return await productComment.ToListAsync();
         }
 
+        // GET: api/Comments/5
+        [HttpGet("user/{id}")]
+        public async Task<ActionResult<IEnumerable<ProductComment>>> GetCommentUser(int id)
+        {
+            if (_context.ProductComments == null)
+            {
+                return NotFound();
+            }
+            var comment = _context.ProductComments.Where(e => e.UserId == id);
+
+            if (comment == null)
+            {
+                return NotFound();
+            }
+
+            return await comment.ToListAsync();
+        }
+
         // PUT: api/ProductComments/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProductComment(int id, ProductComment productComment)

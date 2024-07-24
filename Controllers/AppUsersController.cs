@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using Nayan_Assignement3.Database.Nayan_Assignment3.Data;
 using Nayan_Assignment3.Entities;
 
@@ -103,6 +104,19 @@ namespace Nayan_Assignement3.Controllers
         private bool AppUserExists(int id)
         {
             return _context.AppUsers.Any(e => e.Id == id);
+        }
+
+        [HttpPost("login")]
+        public async Task<ActionResult<UserLogin>> LoginUser(UserLogin data)
+        {
+            if (_context.AppUsers == null)
+            {
+                return Problem("Entity set 'Assignment3DbContext.Users'  is null.");
+            }
+            var result = _context.AppUsers.Where(e => e.Email == data.email && e.Password == data.password);
+            await _context.SaveChangesAsync();
+
+            return result.Count() <= 0 ? NotFound() : Content("Login Successful");
         }
     }
 }
